@@ -3,6 +3,7 @@ import {
 } from 'react-native';
 import {createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
+import mainStack from './mainStack';
 import homeStack from './homeStack';
 import settingStack from './settingStack';
 import signOutStack from './signOutStack';
@@ -17,10 +18,10 @@ const DrawerNav = createDrawerNavigator({
             drawerIcon: ({tintColor}) => <FontAwesome name="id-card" size={15} color={tintColor} />
         }
     },
-    Settings: {
+    'Contact Us': {
         screen: settingStack,
         navigationOptions: {
-            drawerIcon: ({tintColor}) => <FontAwesome name="gear" size={15} color={tintColor} />
+            drawerIcon: ({tintColor}) => <FontAwesome name="phone" size={15} color={tintColor} />
         }
     },
     'Sign Out':{

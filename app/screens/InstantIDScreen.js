@@ -12,7 +12,7 @@ import QRCode from 'react-native-qrcode-svg';
 
 function InstantIDScreen({navigation}) {
 
-    let myID = require('../assets/MassID.jpg');
+    let myID = require('../assets/Tony_DL.png');
        
    
     return (
@@ -24,7 +24,7 @@ function InstantIDScreen({navigation}) {
 
             <View style = {{justifyContent: 'center',alignItems: 'center'}}>
                 <QRCode
-                    value='https://user-images.githubusercontent.com/89670135/154826638-901ecd33-0f1f-428a-b030-b601d1a14af1.jpg'
+                    value='https://user-images.githubusercontent.com/89670135/163010633-f046f19e-a8f5-4351-b981-d316aeb80056.png'
                     size={250}
                     color = "#26558b"
                 />

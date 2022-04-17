@@ -3,10 +3,12 @@ import { useDimensions, useDeviceOrientation } from '@react-native-community/hoo
 import Navigator from './routes/drawer';
 import React, {useEffect } from'react';
 import NavigationContainer from '@react-navigation/native';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 
 function App() {
-  const {landscape} = useDeviceOrientation();
+  //"orientation": "default",
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
 
   return (
       <Navigator/>

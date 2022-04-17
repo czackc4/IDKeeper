@@ -22,7 +22,7 @@ export default Sidebar = props => (
             source={require('../assets/americanFlag.jpg')}
             style={{width: undefined, padding: 16, paddingTop: 30}}
             imageStyle={{opacity:0.3}}>
-            <Image source={(require('../assets/IDPic.jpg'))} style = {styles.IDPic} />
+            <Image source={(require('../assets/Tony_Pic.png'))} style = {styles.IDPic} />
             <Text style={styles.userName}>Anthony Stark</Text>
         </ImageBackground>
         
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         borderColor: '#26558b',
         width: 80,
         height: 80,
-        borderWidth: 3, 
+        borderWidth: 3,
     },
     userName: {
         color: '#26558b',

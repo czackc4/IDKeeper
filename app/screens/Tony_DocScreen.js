@@ -14,15 +14,9 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
-function MainScreen({navigation}) {
+function Tony_DocScreen({navigation}) {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
     
-
-    const openMenu=() => {
-        navigation.openDrawer()
-        const userName = navigation.getParam('first_name') + ' ' + navigation.getParam('last_name')
-        module.exports={userName};
-    }
 
     return (
         <SafeAreaView style={styles.container}>
@@ -33,43 +27,58 @@ function MainScreen({navigation}) {
                     alignItems: 'center',
                     paddingTop: 20
                 }}>
-                    <TouchableOpacity onPress={openMenu}>
-                        <FontAwesome
-                            name="bars"
-                            color="#fff"
-                            size={25} 
-                        />
+                     <TouchableOpacity
+                        onPress={() => navigation.navigate('Main')}
+                        style ={[styles.idButton, {
+                            borderColor:'#fff',
+                            borderWidth: 1,
+                            marginTop: 5,
+                            width: '20%',
+
+                        }]}>
+                            <Text style={[styles.buttonText,{color: '#fff'}]}>Back</Text>
                     </TouchableOpacity>
-                    <Text style={styles.headerText}>{navigation.getParam('first_name')} {navigation.getParam('last_name')}</Text>
+                    <Text style={styles.headerText}>Anthony Stark</Text>
                 </View>
                 <View style={{
                     justifyContent: 'flex-end',
                     alignItems: 'flex-end',
                     paddingTop: 10
                 }}>
-                    <Text style={styles.secondaryText}>{navigation.getParam('country')}</Text>
+                    <Text style={styles.secondaryText}>United States of America</Text>
                 </View>
             </View>
 
             
             <View style={styles.footer}>
                 <View>
-                    <Text style={styles.footerText}>IDs and Licenses</Text>
+                    <Text style={styles.footerText}>Documentation</Text>
                 </View>
                 <View style={styles.button}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('TDLScreen')}
+                        onPress={() => navigation.navigate('TBCScreen')}
                         style ={[styles.idButton, {
                             borderColor:'#26558b',
                             borderWidth: 1,
-                            marginTop: 5
+                            marginTop: 5,
 
                         }]}
                     >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Driver's License</Text>
+                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Birth Certificate</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('TPPScreen')}
+                        onPress={() => navigation.navigate('TSSCScreen')}
+                        style ={[styles.idButton, {
+                            borderColor:'#26558b',
+                            borderWidth: 1,
+                            marginTop: 30,
+
+                        }]}
+                    >
+                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Social Security Card</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('TMLScreen')}
                         style ={[styles.idButton, {
                             borderColor:'#26558b',
                             borderWidth: 1,
@@ -77,56 +86,7 @@ function MainScreen({navigation}) {
 
                         }]}
                     >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Passport</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('TPLScreen')}
-                        style ={[styles.idButton, {
-                            borderColor:'#26558b',
-                            borderWidth: 1,
-                            marginTop: 30
-
-                        }]}
-                    >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Pilot License</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('TGPScreen')}
-                        style ={[styles.idButton, {
-                            borderColor:'#26558b',
-                            borderWidth: 1,
-                            marginTop: 30
-
-                        }]}
-                    >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Firearm License</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{marginTop:50}}>
-                    <Text style={styles.footerText}>Extras</Text>
-                </View>
-                <View>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('TDocScreen')}
-                        style ={[styles.idButton, {
-                            borderColor:'#26558b',
-                            borderWidth: 1,
-                            marginTop: 5
-
-                        }]}
-                    >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Legal Documentation</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('VScreen')}
-                        style ={[styles.idButton, {
-                            borderColor:'#26558b',
-                            borderWidth: 1,
-                            marginTop: 30
-
-                        }]}
-                    >
-                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Vote!</Text>
+                        <Text style={[styles.buttonText,{color: '#26558b'}]}>Marriage License</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -135,7 +95,7 @@ function MainScreen({navigation}) {
     );
 }
 
-export default MainScreen;
+export default Tony_DocScreen;
 
 const styles = StyleSheet.create({
     container: {

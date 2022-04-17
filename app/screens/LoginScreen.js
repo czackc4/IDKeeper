@@ -129,7 +129,7 @@ function LoginScreen({navigation}) {
                         }
                         </TouchableOpacity>
                 </View>
-                <Text style={styles.footerText, {marginTop: 35}}>Date of Birth</Text>
+                <Text style={[styles.footerText, {marginTop: 35}]}>Date of Birth</Text>
                 <View style={styles.inputContainer}>
                     <FontAwesome
                         name="calendar"

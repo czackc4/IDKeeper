@@ -24,7 +24,7 @@ function WelcomeScreen({navigation})  {
                 <Animatable.Image
                         animation="bounceIn"
                         duraton="1500"
-                source={require('../assets/ssn.jpg')}
+                source={require('../assets/Logo.png')}
                 style={styles.logo}
                 resizeMode='stretch'
                 />
@@ -33,7 +33,7 @@ function WelcomeScreen({navigation})  {
                 style={styles.footer}
                 animation="fadeInUpBig"
             >
-                <Text style={styles.title}>Welcome to I.D     Keeper!</Text>
+                <Text style={styles.title}>Welcome to ID     Keeper!</Text>
                 <View style={styles.button}>
                 <TouchableOpacity  onPress={() => navigation.navigate('Login')}>
                     <LinearGradient
@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     logo: {
-        width: height_logo,
-        height: height_logo
+        width: 400,
+        height: 400
     },
     signIn: {
         width: 150,
